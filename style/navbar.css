@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  font-family: Trebuchet MS, sans-serif;
+  background-color: #f5e9e2;
+  color: #5a4230;
+}
+
+/*-----------  NAVBAR  -----------*/
+.navbar {
+  font-size: 18px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0%;
+  background-color: #d7b8a6;
+  border: 1px solid #0d0d0f;
+  box-shadow: inset 0 0 0 2px white;
+  z-index: 100;
+}
+
+.logo {
+  color: #0d0d0f;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  position: relative;
+}
+
+nav a,
+.nav-action {
+  font-size: 18px;
+  color: #0d0d0f;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+nav a:hover,
+.nav-action:hover {
+  background:transparent;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  height: 100%;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  transition: transform 1s;
+}
+
+nav a:hover::before {
+  animation: shine 1s forwards;
+}
+
+/* Make .nav-action shine like .shine-btn */
+.nav-action {
+  position: relative;
+  overflow: hidden; /* so shine stays inside */
+  z-index: 1;
+}
+
+.nav-action::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  height: 100%;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  pointer-events: none; /* stops blocking dropdown clicks */
+  opacity: 0;           /* hidden by default */
+}
+
+.nav-action:hover::before {
+  opacity: 1;           /* visible on hover */
+  animation: shine 1s forwards;
+}
+
+#toggle-action:checked + .nav-action::before {
+  display: none; /* completely hide when menu is open */
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/*----- Dropdown container --------*/
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 100px;
+  display: none;
+  flex-direction: column;
+  background: #f5f0ec;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.dropdown a {
+  color: #333;
+  background: #e8ddd4;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden; /* keeps shine inside each link */
+}
+
+.dropdown a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  height: 100%;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+}
+
+.dropdown a:hover::before {
+  animation: shine 1s forwards;
+}
+
+/* Show dropdown when checkbox is checked */
+#toggle-action:checked + .nav-action + .dropdown {
+  display: flex;
+}
+
+/* Optional: close dropdown when another nav item is clicked */
+nav a:not(.nav-action):not(.dropdown a) {
+  position: relative;
+  z-index: 11;
+}
+
+/*-----------  DONATE BTN  -----------*/
+.shine-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 30px;
+  color: #f7ece6;
+  background: #0d0d0f; /*black*/
+  border: 1px solid #0d0d0f; /*black*/
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 2px #f7ece6;
+  transition: transform 0.3s;
+}
+
+.shine-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  height: 100%;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  transition: transform 1s;
+}
+
+.shine-btn:hover {
+  transform: translateY(-5px);
+}
+
+.shine-btn:hover::before {
+  animation: shine 1s forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/*-----------  NAVBAR Phone  -----------*/
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: #fff8f5;
+    box-shadow: 0 2px 6px rgba(200, 150, 130, 0.2);
+  }
+
+  /* Hide nav by default on phone */
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Show nav when logo (toggle-menu) is checked */
+  #toggle-menu:checked ~ nav {
+    display: flex;
+  }
+
+  /* Make logo clickable toggle */
+  .logo {
+    order: -1;
+    font-size: 20px;
+    color: #5a4230;
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
+
+  .navbar nav a,
+  .nav-action {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #8c5f4e;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar nav a:hover,
+  .nav-action:hover {
+    background-color: #f2c9b3;
+    color: #5a4230;
+  }
+
+  .dropdown {
+    position: static;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background: #f5f0ec;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: none;
+    margin-top: 5px;
+  }
+
+  #toggle-action:checked + .nav-action + .dropdown {
+    display: flex;
+  }
+
+  .dropdown a {
+    width: 100%;
+    text-align: center;
+    padding: 8px 12px;
+    background: #e8ddd4;
+    border-radius: 6px;
+  }
+
+  .dropdown a:hover {
+    background: #d2c1b7;
+  }
+}

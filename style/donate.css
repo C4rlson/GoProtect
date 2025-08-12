@@ -1,0 +1,95 @@
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d7b8a6;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 88%;
+  border: 1px solid black;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.banner-img img {
+  width: 500px;
+  scale: 1.16;
+  transition: transform 0.4s ease;
+  transform: scale(1);
+}
+
+
+.price-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  flex: 1;
+  max-width: 70%;
+}
+
+/* ---------- PRICE CARD ---------- */
+.price-card {
+  background-color: #ebe6e4;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+    border: 1px solid black;
+  box-shadow: inset 0 0 0 2px white;
+  transition: all 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+}
+
+.price-card .icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.price-card .amount {
+  font-size: 20px;
+  color: #5a4230;
+  margin-bottom: 8px;
+}
+
+
+/* ---------- CUSTOM PRICE CARD ---------- */
+.price-card.custom .amount-input {
+  padding: 6px;
+  width: 80%;
+  border-radius: 6px;
+  border: 1px solid #d7b8a6;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+/* ---------- PHONE ---------- */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .price-container {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner-img img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .price-card .amount {
+    font-size: 18px;
+  }
+
+  .price-card.custom .amount-input {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,276 @@
+/*-------  Who We Are  ---------*/
+.who-we-are {
+  max-width: 95%;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+  background-color: #e2d3cb;
+  border: 1px solid black;
+  box-shadow: inset 0 0 0 2px white;
+  border-radius: 10px;
+}
+
+.who-we-are h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #4a3b2b;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logo img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 10px;
+  
+}
+
+.text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.headline {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #4a3b2b;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6d5644;
+}
+
+/*-------- Aim and Goal ---------*/
+
+img[alt="goal"]{
+  color: #4a3b2b;
+}
+
+.charity-goal-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: left;
+  
+}
+
+.charity-goal-section h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #a67c73;
+}
+
+.goals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+.goal-card {
+  background-color: #b88c7d;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(150, 100, 90, 0.1);
+  transition: transform 0.3s ease;
+  color: white;
+  border: 1px solid black;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.goal-card:hover {
+  transform: translateY(-3px);
+}
+
+.goal-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.goal-text h2 {
+  font-size: 20px;
+  margin: 0 0 6px 0;
+}
+
+.goal-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/*-------  What We Do  ---------*/
+.what-we-do {
+  max-width: 100%;
+  margin: 60px auto;
+  padding: 0 10px;
+  text-align: center;
+  color: #5a4230; 
+}
+
+.what-we-do h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #4a3b2b;
+}
+
+.description {
+  font-size: 16px;
+  color: #8a6f54; 
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f5e9e2; 
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(90, 66, 48, 0.1); 
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s;
+  border: 1px solid black;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box {
+  font-size: 28px;
+  background-color: #e2cfc3; 
+  padding: 8px 12px;
+  border: 2px solid #5a4230;
+  border-radius: 8px;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  color: #5a4230;
+  border: 1px solid black;
+  box-shadow: inset 0 0 0 2px white;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.icon-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  height: 100%;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  transition: transform 1s;
+}
+
+.icon-box:hover::before {
+  animation: shine 1s forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+.icon-box img {
+  width: 35px;
+  height: 35px;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #4a3b2b;
+}
+
+.card p {
+  font-size: 14px;
+  color: #6d5644;
+}
+
+/*---------- Phoone ---------- */
+@media (max-width: 600px) {
+  .who-we-are{
+    width: 90%;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .charity-goal-section h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .goals-container {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .goal-icon img {
+    margin-bottom: 10px;
+  }
+
+  .what-we-do h2 {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .icon-box {
+    left: 10px;
+    top: -20px;
+  }
+
+}
