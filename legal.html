@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProjectWebPrograming2025</title>
+  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style/navbar.css" />
+  <link rel="stylesheet" href="style/legal.css" />
+  <link rel="stylesheet" href="style/sitemap.css" />
+</head>
+
+<body>
+    <header class="navbar">
+    <!-- Logo for menu toggle on phone -->
+    <input type="checkbox" id="toggle-menu" hidden>
+    <label for="toggle-menu" class="logo">GoProtect</label>
+
+    <nav>
+      <a href="index.html">Home</a>
+
+      <!-- Action toggle for both desktop & phone -->
+      <input type="checkbox" id="toggle-action" hidden>
+      <label for="toggle-action" class="nav-action">Action</label>
+      <div class="dropdown">
+        <a href="donate.html">Donate</a>
+        <a href="what-can-do.html">What We Can Do</a>
+        <a href="shelter.html">Shelter</a>
+      </div>
+
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+     <!-- Contact Us -->
+    <section id="contact-us">
+      <div class="box">
+        <div class="abox">
+          <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>Have a question or want to help? Fill out the form below and we'll get back to you.</p>
+
+            <form class="contact-form" action="thankyou.html" method="post" enctype="multipart/form-data">
+              <!-- Name -->
+              <label for="name"> Name <span>*</span></label>
+              <input type="text" id="name" name="name" required>
+
+              <!-- Email -->
+              <label for="email">Email Address <span>*</span></label>
+              <input type="email" id="email" name="email" required>
+
+              <!-- Phone -->
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+
+              <!-- Reason -->
+              <label for="reason">Reason for Contact</label>
+              <select id="reason" name="reason">
+                <option value="">Select an option</option>
+                <option value="donation">Donation</option>
+                <option value="volunteering">Volunteering</option>
+                <option value="adoption">Adoption Request</option>
+                <option value="other">Other</option>
+              </select>
+
+              <!-- Attachment Upload -->
+              <label for="attachment">Attachment (Photo / Document)</label>
+              <input type="file" id="attachment" name="attachment" accept="image/*,.pdf,.doc,.docx">
+
+              <!-- Message -->
+              <label for="message">Message <span>*</span></label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+
+              <!-- Submit -->
+              <a href="submitted.html" class="shine-btn" type="submit" style="margin-top: 20px;">Submit</a>
+            </form>
+          </section>
+        </div>
+        <div class="bbox">
+          <div class="set">
+            <img src="image/location.svg" alt="Address Icon">
+            <h1>Office</h1>
+            <p>No.0 Jalan 000, 00000, Cyber Jaya, Selangor, Malaysia</p>
+          </div>
+          <div class="set">
+            <img src="image/mail.svg" alt="Mail Icon">
+            <h1>Email</h1>
+            <p>GoProtect@gmail.org</p>
+          </div>
+          <div class="set">
+            <img src="image/phone.svg" alt="Phone Icon">
+            <h1>Phone</h1>
+            <p>Office : +60 0000 0000 <br> Whatapp : +60 00 000 0000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section id="privacy-policy">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: August 13, 2025</p>
+      <p><strong>GoProtect</strong> is committed to protecting the privacy of our donors, volunteers, supporters, and visitors to our
+        website. This policy explains how we collect, use, and safeguard your personal information.</p>
+
+      <h2>Information We Collect</h2>
+      <ul>
+        <li>Personal details such as your name, email address, phone number, and postal address when you donate,
+          volunteer, or contact us.</li>
+        <li>Payment details when processing donations (processed securely through trusted payment providers).</li>
+        <li>Non-personal information such as browser type, pages visited, and time spent on our site (for improving our
+          services).</li>
+      </ul>
+
+      <h2>How We Use Your Information</h2>
+      <ul>
+        <li>To process donations and send tax receipts.</li>
+        <li>To communicate updates about our rescue missions, adoption events, and fundraising campaigns.</li>
+        <li>To improve our website and donor experience.</li>
+      </ul>
+
+      <h2>Sharing Your Information</h2>
+      <p>We do not sell or rent your personal information. We may share it with trusted third-party service providers
+        solely for purposes of payment processing, email delivery, or analytics.</p>
+
+      <h2>Your Rights</h2>
+      <p>You can request to access, update, or delete your personal information by contacting us.</p>
+    </section>
+
+    <!-- Terms of Use -->
+    <section id="terms-of-use">
+      <h1>Terms of Use</h1>
+      <p>Last updated: August 13, 2025</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By using this website, you agree to comply with these Terms of Use. If you do not agree, please do not use our
+        site.</p>
+
+      <h2>2. Purpose of the Website</h2>
+      <p>This site is dedicated to promoting animal welfare, fundraising for rescue operations, and sharing adoption
+        information. All content is for informational and fundraising purposes only.</p>
+
+      <h2>3. Donations</h2>
+      <p>All donations are voluntary and non-refundable. We ensure all funds are used in support of our mission to
+        rescue,
+        rehabilitate, and rehome animals.</p>
+
+      <h2>4. Intellectual Property</h2>
+      <p>All images, videos, and text on this site are owned by <strong>GoProtect</strong> or used with permission. You may not
+        reproduce or distribute our content without prior written consent.</p>
+
+      <h2>5. Limitation of Liability</h2>
+      <p>We are not liable for any damages arising from your use of this site or from any external links provided.</p>
+
+      <h2>6. Changes to Terms</h2>
+      <p>We may update these terms without notice. Continued use of the site after updates means you accept the revised
+        terms.</p>
+    </section>
+
+    <a href="index.html" class="shine-btn" style="margin-left: 20px;margin-bottom: 10px;">Back to Home</a>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h2>GoProtect</h2>
+
+        <h3>About Us</h3>
+        <p>We want to help animal in the seroundding</p>
+        <div class="contact">
+          <p><i class="fa fa-phone"></i> +60 0000 0000</p>
+          <p><i class="fa fa-envelope"></i> GoProtect@gmail.org </p>
+        </div>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Action</h3>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="what-can-do.html">What to Do</a></li>
+          <li><a href="shelter.html">Shelter</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Support & Legal</h3>
+        <ul>
+          <li><a href="legal.html#privacy-policy">Policy</a></li>
+          <li><a href="legal.html#terms-of-use">Terms of Use</a></li>
+          <li><a href="legal.html#contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-google-plus"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <p>2025 © company.GoProtect</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

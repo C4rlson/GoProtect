@@ -114,6 +114,13 @@
   animation: shine 1s forwards;
 }
 
+.best-list li a {
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+    align-items: center;
+}
+
 
 .best-list img {
   width: 60px;

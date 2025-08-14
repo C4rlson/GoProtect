@@ -1,3 +1,4 @@
+
 /*-------  Who We Are  ---------*/
 .who-we-are {
   max-width: 95%;
@@ -26,7 +27,7 @@
 
 .logo img {
   width: 500px;
-  max-width: 100%;
+  max-width: 95%;
   border-radius: 10px;
   
 }
@@ -128,7 +129,7 @@ img[alt="goal"]{
 
 /*-------  What We Do  ---------*/
 .what-we-do {
-  max-width: 100%;
+  max-width: 95%;
   margin: 60px auto;
   padding: 0 10px;
   text-align: center;
@@ -204,19 +205,6 @@ img[alt="goal"]{
   animation: shine 1s forwards;
 }
 
-@keyframes shine {
-  0% {
-    left: -75%;
-  }
-  100% {
-    left: 125%;
-  }
-}
-
-.icon-box img {
-  width: 35px;
-  height: 35px;
-}
 
 .card h3 {
   font-size: 20px;
@@ -242,7 +230,7 @@ img[alt="goal"]{
   }
 
   .text {
-    max-width: 100%;
+    max-width: 95%;
     text-align: center;
   }
 
